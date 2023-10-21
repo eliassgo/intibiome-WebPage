@@ -3,10 +3,21 @@ import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
-  background-color: ${colors.gray};
+  background-color: ${colors.black};
   border-radius: 8px;
   padding: 8px;
   position: relative;
+  text-decoration: none;
+  color: ${colors.white};
+  display: block;
+  height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
 
   ${TagContainer} {
     margin-right: 8px;
