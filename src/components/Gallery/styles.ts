@@ -3,6 +3,8 @@ import { colors } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 `
 
 export const Action = styled.div`
@@ -22,7 +24,6 @@ export const Action = styled.div`
 export const Item = styled.li`
   position: relative;
   list-style: none;
-  margin-right: 16px;
 
   > img {
     border: 2px solid ${colors.white};
