@@ -24,6 +24,7 @@ export const Action = styled.div`
 export const Item = styled.li`
   position: relative;
   list-style: none;
+  cursor: zoom-in;
 
   > img {
     border: 2px solid ${colors.white};

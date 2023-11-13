@@ -1,4 +1,4 @@
-import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from '../Button'
 import {
   CartContainer,
@@ -10,7 +10,6 @@ import {
 } from './styles'
 
 import Tag from '../Tag'
-import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, remove } from '../../store/reducers/cart'
 import { formataPreco } from '../ProductsList'

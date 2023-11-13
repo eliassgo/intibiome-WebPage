@@ -5,7 +5,7 @@ export const ImagemDiv = styled.div`
   width: 100%;
   height: 560px;
   display: block;
-  background-repeate: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   font-weight: bold;
   position: relative;
