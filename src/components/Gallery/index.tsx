@@ -1,4 +1,4 @@
-import { Action, Item, Items, Modal, ModalContente } from './styles'
+import * as S from './styles'
 import { useState } from 'react'
 import { GalleryItem } from '../../pages/Home'
 
@@ -44,9 +44,9 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
   return (
     <>
       <Section title="Galeria" background="black">
-        <Items>
+        <S.Items>
           {items.map((media, index) => (
-            <Item
+            <S.Item
               key={media.url}
               onClick={() => {
                 setModal({
@@ -60,18 +60,18 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
                 src={getMediaCover(media)}
                 alt={`Midia ${index + 1} de ${name}`}
               />
-              <Action>
+              <S.Action>
                 <img
                   src={getMediaIcon(media)}
                   alt="Clique para maximar a mídia"
                 />
-              </Action>
-            </Item>
+              </S.Action>
+            </S.Item>
           ))}
-        </Items>
+        </S.Items>
       </Section>
-      <Modal className={modal.isVisible ? 'visivel' : ''}>
-        <ModalContente className="container">
+      <S.Modal className={modal.isVisible ? 'is-visivel' : ''}>
+        <S.ModalContente className="container">
           <header>
             <h4>{name}</h4>
             <img src={close} alt="Close icon" onClick={() => closeModal()} />
@@ -81,9 +81,9 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ) : (
             <iframe src={modal.url} frameBorder={0} />
           )}
-        </ModalContente>
-        <div onClick={() => closeModal()} className="overlay"></div>
-      </Modal>
+        </S.ModalContente>
+        <div onClick={closeModal} className="overlay"></div>
+      </S.Modal>
     </>
   )
 }
