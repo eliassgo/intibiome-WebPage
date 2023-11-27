@@ -1,6 +1,5 @@
 import * as S from './styles'
 import { useState } from 'react'
-import { GalleryItem } from '../../pages/Home'
 
 import play from '../../assets/images/botao-play.png'
 import zoom from '../../assets/images/mais-zoom.png'

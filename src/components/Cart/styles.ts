@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 import close from '../../assets/images/close.png'
@@ -32,10 +32,20 @@ export const Sidebar = styled.aside`
   padding: 40px 16px 0 16px;
   max-width: 360px;
   width: 100%;
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 70%;
+  }
 
   ${ButtonContainer} {
     width: 100%;
     max-width: 100%;
+  }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
   }
 `
 export const Prices = styled.p`
