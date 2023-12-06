@@ -55,7 +55,7 @@ const Footer = () => (
           </li>
         </S.Links>
       </S.FooterSection>
-      <p>{currentYear} - &copy; E-PLAY Todos os direitos reservados</p>
+      <p>{currentYear} - &copy; Todos os direitos reservados</p>
     </div>
   </S.Container>
 )
