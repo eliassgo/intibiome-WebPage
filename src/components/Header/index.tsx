@@ -5,19 +5,15 @@ import { HashLink } from 'react-router-hash-link'
 import * as S from './styles'
 
 import logo from '../../assets/images/logo.svg'
-import cartItem from '../../assets/images/carrinho.svg'
 
 import { open } from '../../store/reducers/cart'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootReducer } from '../../store'
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const dispatch = useDispatch()
-
-  const { items } = useSelector((state: RootReducer) => state.cart)
 
   const openCart = () => {
     dispatch(open())
@@ -39,64 +35,54 @@ const Header = () => {
           <nav>
             <S.Links>
               <S.LinItem>
-                <Link
-                  title="clique aqui para acessar a página de categorias"
-                  to="/categories"
-                >
-                  Categorias
+                <Link title="clique aqui para acessar a página " to="/">
+                  Page
                 </Link>
               </S.LinItem>
               <S.LinItem>
-                <HashLink
-                  title="clique aqui para acessar a seção de novidades"
-                  to="/#coming-soon"
-                >
-                  Em breve
+                <HashLink title="clique aqui para acessar a seção " to="/">
+                  Section
                 </HashLink>
               </S.LinItem>
               <S.LinItem>
-                <HashLink
-                  title="clique aqui para acessar a seção de promoções"
-                  to="/#on-sale"
-                >
-                  Promoções
+                <HashLink title="clique aqui para acessar a seção " to="/">
+                  Section
                 </HashLink>
               </S.LinItem>
             </S.Links>
           </nav>
         </div>
         <S.CartButton role="button" onClick={openCart}>
-          {items.length} <span>- produto(s)</span>
-          <img src={cartItem} alt="Carrinho" />
+          ICON
         </S.CartButton>
       </S.HeaderRow>
       <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <S.Links>
           <S.LinItem>
             <Link
-              title="clique aqui para acessar a página de categorias"
-              to="/categories"
+              title="clique aqui para acessar a página "
+              to="/"
               onClick={() => setIsMenuOpen(false)}
             >
-              Categorias
+              Página
             </Link>
           </S.LinItem>
           <S.LinItem>
             <HashLink
               onClick={() => setIsMenuOpen(false)}
-              title="clique aqui para acessar a seção de novidades"
-              to="/#coming-soon"
+              title="clique aqui para acessar a seção "
+              to="/"
             >
-              Em breve
+              Seçao
             </HashLink>
           </S.LinItem>
           <S.LinItem>
             <HashLink
               onClick={() => setIsMenuOpen(false)}
-              title="clique aqui para acessar a seção de promoções"
-              to="/#on-sale"
+              title="clique aqui para acessar a seção"
+              to="/"
             >
-              Promoções
+              Seçao
             </HashLink>
           </S.LinItem>
         </S.Links>

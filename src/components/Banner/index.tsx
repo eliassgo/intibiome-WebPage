@@ -24,8 +24,6 @@ const Banner = ({ image, title, subtitle, page }: Props) => {
     return () => clearTimeout(timeout)
   }, [])
 
-  // return
-
   return (
     <>
       {loading ? (
@@ -42,10 +40,10 @@ const Banner = ({ image, title, subtitle, page }: Props) => {
             </div>
             <Button
               type="link"
-              to={`/product/${page}`}
+              to={`/element/${page}`}
               title="Venha Aproveitar essa oferta"
             >
-              Aproveitar
+              Ir para page
             </Button>
           </div>
         </S.Image>

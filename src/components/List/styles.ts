@@ -1,11 +1,9 @@
 import { styled } from 'styled-components'
 import { Props } from '.'
 import { breakpoints, colors } from '../../styles'
-import { Card } from '../Product/styles'
+import { Card } from '../ListItem/styles'
 
-export const Container = styled.section<
-  Omit<Props, 'title' | 'games' | 'isLoading'>
->`
+export const Container = styled.section<Omit<Props, 'title'>>`
   padding: 32px 0;
   background-color: ${(props) =>
     props.background === 'black' ? colors.black : colors.gray};

@@ -9,18 +9,18 @@ const Footer = () => (
         <S.SectionTitle>Title</S.SectionTitle>
         <S.Links>
           <li>
-            <S.Link title="Clique aqui para " to="/categories#rpg">
+            <S.Link title="Clique aqui para " to="/">
               Section
             </S.Link>
           </li>
           <li>
-            <S.Link title="Clique aqui para " to="/categories#action">
+            <S.Link title="Clique aqui para " to="/">
               Section
             </S.Link>
           </li>
 
           <li>
-            <S.Link title="Clique aqui para " to="/categories#sports">
+            <S.Link title="Clique aqui para " to="/">
               Section
             </S.Link>
           </li>
@@ -34,7 +34,7 @@ const Footer = () => (
           </li>
 
           <li>
-            <S.Link title="Clique aqui para acessar " to="/categories#fight">
+            <S.Link title="Clique aqui para acessar " to="/">
               Section
             </S.Link>
           </li>
@@ -44,12 +44,12 @@ const Footer = () => (
         <S.SectionTitle>Title</S.SectionTitle>
         <S.Links>
           <li>
-            <S.Link title="clique aqui para acessar " to="/#on-sale">
+            <S.Link title="clique aqui para acessar " to="/">
               Section
             </S.Link>
           </li>
           <li>
-            <S.Link title="clique aqui para acessar " to="/#coming-soon">
+            <S.Link title="clique aqui para acessar " to="/">
               Em Section
             </S.Link>
           </li>

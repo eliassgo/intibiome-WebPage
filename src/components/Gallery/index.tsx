@@ -6,6 +6,11 @@ import zoom from '../../assets/images/mais-zoom.png'
 import close from '../../assets/images/close.png'
 import Section from '../Section'
 
+declare interface GalleryItem {
+  type: 'image' | 'video'
+  url: string
+}
+
 type Props = {
   defaultCover: string
   name: string
