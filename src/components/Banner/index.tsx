@@ -3,38 +3,54 @@ import Button from '../Button'
 import Tag from '../Tag'
 
 import * as S from './styles'
+import { useEffect, useState } from 'react'
 
-import { useGetFeaturedGameQuery } from '../../services/api'
+export type Props = {
+  image: string
+  title: string
+  subtitle: string
+  page: string
+}
 
-import { parseToBrl } from '../../utils'
+const Banner = ({ image, title, subtitle, page }: Props) => {
+  const [loading, setLoading] = useState(true)
 
-const Banner = () => {
-  const { data: game } = useGetFeaturedGameQuery()
+  useEffect(() => {
+    // Simula um atraso de 2 segundos antes de definir o estado de loading para false
+    const timeout = setTimeout(() => {
+      setLoading(false)
+    }, 2000)
 
-  if (!game) {
-    return <Loader />
-  }
+    return () => clearTimeout(timeout)
+  }, [])
+
+  // return
 
   return (
-    <S.Image style={{ backgroundImage: `url(${game.media.cover})` }}>
-      <div className="container">
-        <Tag size={'large'}>Destaque do dia</Tag>
-        <div>
-          <S.Title>{game.name}</S.Title>
-          <S.Prices>
-            De <span>{parseToBrl(game.prices.old)}</span> <br />
-            Por {parseToBrl(game.prices.current)}
-          </S.Prices>
-        </div>
-        <Button
-          type="link"
-          to={`/product/${game.id}`}
-          title="Venha Aproveitar essa oferta"
-        >
-          Aproveitar
-        </Button>
-      </div>
-    </S.Image>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <S.Image style={{ backgroundColor: `url(${image})` }}>
+          <div className="container">
+            <Tag size={'large'}>TAG</Tag>
+            <div>
+              <S.Title>{title}</S.Title>
+              <S.Prices>
+                <span>{subtitle}</span> <br />
+              </S.Prices>
+            </div>
+            <Button
+              type="link"
+              to={`/product/${page}`}
+              title="Venha Aproveitar essa oferta"
+            >
+              Aproveitar
+            </Button>
+          </div>
+        </S.Image>
+      )}
+    </>
   )
 }
 export default Banner

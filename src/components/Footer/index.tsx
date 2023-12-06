@@ -6,69 +6,51 @@ const Footer = () => (
   <S.Container>
     <div className="container">
       <S.FooterSection>
-        <S.SectionTitle>Categorias</S.SectionTitle>
+        <S.SectionTitle>Title</S.SectionTitle>
         <S.Links>
           <li>
-            <S.Link
-              title="Clique aqui para acessar jogos de RPG"
-              to="/categories#rpg"
-            >
-              RPG
+            <S.Link title="Clique aqui para " to="/categories#rpg">
+              Section
             </S.Link>
           </li>
           <li>
-            <S.Link
-              title="Clique aqui para acessar jogos de ação"
-              to="/categories#action"
-            >
-              Ação
+            <S.Link title="Clique aqui para " to="/categories#action">
+              Section
             </S.Link>
           </li>
 
           <li>
-            <S.Link
-              title="Clique aqui para acessar jogos de esporte"
-              to="/categories#sports"
-            >
-              Esportes
+            <S.Link title="Clique aqui para " to="/categories#sports">
+              Section
             </S.Link>
           </li>
           <li>
             <S.Link
-              title="Clique aqui para acessar jogos de simulação"
+              title="Clique aqui para acessar "
               to="/categories#simulation"
             >
-              Simulação
+              Section
             </S.Link>
           </li>
 
           <li>
-            <S.Link
-              title="Clique aqui para acessar jogos de luta"
-              to="/categories#fight"
-            >
-              Luta
+            <S.Link title="Clique aqui para acessar " to="/categories#fight">
+              Section
             </S.Link>
           </li>
         </S.Links>
       </S.FooterSection>
       <S.FooterSection>
-        <S.SectionTitle>Acesso rápido</S.SectionTitle>
+        <S.SectionTitle>Title</S.SectionTitle>
         <S.Links>
           <li>
-            <S.Link
-              title="clique aqui para acessar a seção de promoções"
-              to="/#on-sale"
-            >
-              Promoções
+            <S.Link title="clique aqui para acessar " to="/#on-sale">
+              Section
             </S.Link>
           </li>
           <li>
-            <S.Link
-              title="clique aqui para acessar a seção de novidades"
-              to="/#coming-soon"
-            >
-              Em breve
+            <S.Link title="clique aqui para acessar " to="/#coming-soon">
+              Em Section
             </S.Link>
           </li>
         </S.Links>

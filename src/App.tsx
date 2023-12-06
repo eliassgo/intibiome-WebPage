@@ -7,7 +7,7 @@ import Rotas from './routes'
 import Footer from './components/Footer'
 import { Provider } from 'react-redux'
 import { store } from './store'
-import Cart from './components/Cart'
+import Cart from './components/SideBar'
 
 function App() {
   return (

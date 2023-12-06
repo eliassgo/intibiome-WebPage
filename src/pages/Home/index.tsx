@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
+import banner from '../../assets/images/banner-option-2.png'
 
 import { useGetOnSaleQuery, useGetSoonQuery } from '../../services/api'
 
@@ -9,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Banner />
+      <Banner image={banner} title="Elias" subtitle="Setup" page="/" />
       <ProductsList
         games={onSaleGames}
         title="Promoções"
