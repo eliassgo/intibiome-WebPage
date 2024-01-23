@@ -1,94 +1,34 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
 
-export const Links = styled.ul`
+export const Header = styled.div`
   display: flex;
-  margin-left: 40px;
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-left: 0;
-    display: block;
-  }
-`
-
-export const HeaderBar = styled.header`
-  background-color: ${colors.gray};
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 80px;
-
-  a {
-    color: ${colors.white};
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  h1 {
-    line-height: 0;
-  }
-`
-export const HeaderRow = styled.div`
-  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
+  margin: 16px 0 16px 0;
 
-  > div {
+  .logo {
     display: flex;
-    align-items: center;
-
-    @media (max-width: ${breakpoints.tablet}) {
-      flex: 1;
-      justify-content: space-between;
-      ${Links} {
-        display: none;
-      }
-    }
-  }
-`
-export const NavMobile = styled.nav`
-  display: none;
-
-  &.is-open {
-    display: block;
-  }
-`
-
-export const LinItem = styled.li`
-  margin-right: 16px;
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-right: 0;
-
-    a,
-    span {
-      padding: 16px 0;
-      display: block;
-      text-align: center;
-    }
-  }
-`
-export const CartButton = styled.span`
-  display: flex;
-  cursor: pointer;
-  img {
-    margin-left: 16px;
-  }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    span {
-      display: none;
-    }
-  }
-`
-export const Hambuerguer = styled.div`
-  width: 32px;
-  span {
-    height: 2px;
-    display: block;
+    justify-content: center;
     width: 100%;
-    background-color: ${colors.white};
-    margin-bottom: 4px;
   }
 
-  @media (min-width: ${breakpoints.tablet}) {
-    display: none;
+  .search {
+    margin: 24px;
+  }
+`
+
+export const NavBar = styled.nav`
+  background-color: ${colors.blue};
+  height: 49px;
+  display: flex;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    margin: 0 20px 0 20px;
   }
 `

@@ -10,7 +10,6 @@ function App() {
     <>
       <BrowserRouter>
         <GlobalCss />
-        <div className="container">Header</div>
         <Rotas />
         <Footer />
       </BrowserRouter>

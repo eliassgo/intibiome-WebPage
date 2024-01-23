@@ -1,17 +1,26 @@
 import React from 'react'
-import { Container } from './styles'
+import { CardComponent } from './styles'
 
-type Props = {
+export type Props = {
   children: JSX.Element
   title: string
+  margin: string
+  width?: string
 }
 
-const Card = ({ children, title }: Props) => {
+const Card = ({ title, margin, children, width }: Props) => {
   return (
-    <Container>
-      <h2>{title}</h2>
-      {children}
-    </Container>
+    <CardComponent
+      className="container"
+      margin={margin}
+      title={title}
+      width={width}
+    >
+      <>
+        <h2 className="h2">{title}</h2>
+        {children}
+      </>
+    </CardComponent>
   )
 }
 

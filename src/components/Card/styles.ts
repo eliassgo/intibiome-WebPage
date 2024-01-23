@@ -1,25 +1,14 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { Props } from '.'
 
-export const Container = styled.div`
-  border-radius: 8px;
-  background-color: ${colors.gray};
-  padding: 24px;
-  margin-bottom: 40px;
-  h2,
-  h3 {
-    margin-bottom: 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: ${colors.white};
-  }
+export const CardComponent = styled.div<Props>`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 
-  .margin-top {
-    margin-top: 24px;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 22px;
+  h2 {
+    margin-bottom: ${(props) => props.margin + 'px'};
+    width: ${(props) => props.width + 'px'};
   }
 `
