@@ -1,19 +1,34 @@
 import Banner from '../../components/Banner'
+
 import Header from '../../components/Header'
+
+import Card from '../../components/Card'
+
+import Paragraph from '../../components/Paragraph'
+
+import Icons from '../../components/Icons'
+
+import List from '../../components/List'
+
 import bannerImage from '../../assets/images/banner-hero.jpg'
 import banner02 from '../../assets/images/Asset-22.jpg'
 import imageMask01 from '../../assets/images/image-mask.jpg'
 import imageMask03 from '../../assets/images/image-mask-2.jpg'
 import imageMask02 from '../../assets/images/imagemask-1.jpg'
-import Card from '../../components/Card'
-import Paragraph from '../../components/Paragraph'
-import Icons from '../../components/Icons'
-import List from '../../components/List'
+import imageMaskArticle01 from '../../assets/images/image-mask-03.jpg'
+import imageMaskArticle02 from '../../assets/images/image-mask-01.jpg'
+import imageMaskArticle03 from '../../assets/images/image-mask-02.jpg'
 
 export type ProductType = {
   image: string
   description: string
   title: string
+  imageDescription: string
+  id: number
+}
+export type ArticleType = {
+  image: string
+  description: string
   imageDescription: string
   id: number
 }
@@ -38,6 +53,26 @@ const ProducsItems: ProductType[] = [
     image: imageMask02,
     description: 'intibiome agecare dryness relief intimate wash',
     title: 'agecare',
+    imageDescription: 'oooooooo'
+  }
+]
+const ArticleItems: ArticleType[] = [
+  {
+    id: 1,
+    image: imageMaskArticle01,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageDescription: 'oooooooo'
+  },
+  {
+    id: 2,
+    image: imageMaskArticle02,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imageDescription: 'oooooooo'
+  },
+  {
+    id: 3,
+    image: imageMaskArticle03,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imageDescription: 'oooooooo'
   }
 ]
@@ -93,8 +128,13 @@ const Home = () => {
           </Paragraph>
         </>
       </Card>
-      <List title="our products" items={ProducsItems} />
+      <List title="our products" items={ProducsItems} listType="product" />
       <Banner image={banner02} imageDescription="banner" />
+      <List
+        title="keep up to date with our discoveries"
+        article={ArticleItems}
+        listType="article"
+      />
     </>
   )
 }

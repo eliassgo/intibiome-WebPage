@@ -1,61 +1,42 @@
 import * as S from './styles'
-
-const currentYear = new Date().getFullYear()
-
+import InstagraIcon from '../../assets/images/Layer-2.svg'
 const Footer = () => (
   <S.Container>
     <div className="container">
-      <S.FooterSection>
-        <S.SectionTitle>Title</S.SectionTitle>
-        <S.Links>
-          <li>
-            <S.Link title="Clique aqui para " to="/">
-              Section
-            </S.Link>
-          </li>
-          <li>
-            <S.Link title="Clique aqui para " to="/">
-              Section
-            </S.Link>
-          </li>
+      <S.Links>
+        <li>
+          <S.Link title="Clique aqui para">contact us </S.Link>
+        </li>
+        <li>
+          <S.Link title="Clique aqui para ">faq</S.Link>
+        </li>
 
-          <li>
-            <S.Link title="Clique aqui para " to="/">
-              Section
-            </S.Link>
-          </li>
-          <li>
-            <S.Link
-              title="Clique aqui para acessar "
-              to="/categories#simulation"
-            >
-              Section
-            </S.Link>
-          </li>
+        <li>
+          <S.Link title="Clique aqui para ">privacy policy</S.Link>
+        </li>
+        <li>
+          <S.Link title="Clique aqui para acessar ">cookies policy</S.Link>
+        </li>
 
-          <li>
-            <S.Link title="Clique aqui para acessar " to="/">
-              Section
-            </S.Link>
-          </li>
-        </S.Links>
-      </S.FooterSection>
+        <li className="noneBorder">
+          <S.Link title="Clique aqui para acessar ">legal police</S.Link>
+        </li>
+      </S.Links>
+
       <S.FooterSection>
-        <S.SectionTitle>Title</S.SectionTitle>
-        <S.Links>
+        <ul>
           <li>
-            <S.Link title="clique aqui para acessar " to="/">
-              Section
+            <S.Link>
+              <img src={InstagraIcon} alt="" />
             </S.Link>
           </li>
           <li>
-            <S.Link title="clique aqui para acessar " to="/">
-              Em Section
+            <S.Link>
+              <img src={InstagraIcon} alt="" />
             </S.Link>
           </li>
-        </S.Links>
+        </ul>
       </S.FooterSection>
-      <p>{currentYear} - &copy; Todos os direitos reservados</p>
     </div>
   </S.Container>
 )
