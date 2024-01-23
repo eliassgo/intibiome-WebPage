@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { TagContainer } from '../Tag/styles'
 
 export const Image = styled.div`
   width: 100%;
@@ -17,10 +16,6 @@ export const Image = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     z-index: 1;
-  }
-  ${TagContainer} {
-    position: absolute;
-    top: 32px;
   }
 
   &::after {

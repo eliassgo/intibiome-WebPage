@@ -1,6 +1,5 @@
 import Loader from '../Loader'
 import Button from '../Button'
-import Tag from '../Tag'
 
 import * as S from './styles'
 import { useEffect, useState } from 'react'
@@ -31,7 +30,6 @@ const Banner = ({ image, title, subtitle, page }: Props) => {
       ) : (
         <S.Image style={{ backgroundColor: `url(${image})` }}>
           <div className="container">
-            <Tag size={'large'}>TAG</Tag>
             <div>
               <S.Title>{title}</S.Title>
               <S.Prices>
