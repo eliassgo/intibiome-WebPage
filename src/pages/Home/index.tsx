@@ -9,7 +9,6 @@ import Card from '../../components/Card'
 import Paragraph from '../../components/Paragraph'
 import Icons from '../../components/Icons'
 import List from '../../components/List'
-import Article from '../../components/Article'
 
 export type ProductType = {
   image: string
@@ -96,7 +95,6 @@ const Home = () => {
       </Card>
       <List title="our products" items={ProducsItems} />
       <Banner image={banner02} imageDescription="banner" />
-      <Article />
     </>
   )
 }

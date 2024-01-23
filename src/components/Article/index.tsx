@@ -1,16 +1,20 @@
 import React from 'react'
-import imageExample from '../../assets/images/image-mask-03.jpg'
-import { ArticleComponent } from './styles'
+import { ArticleComponent, Description } from './styles'
 
-const Article = () => {
+export type Props = {
+  image: string
+  imageDescription: string
+  description: string
+}
+const Article = ({ image, imageDescription, description }: Props) => {
   return (
     <ArticleComponent>
       <div>
-        <img src={imageExample} alt="" />
+        <img src={image} alt={imageDescription} />
       </div>
-      <div>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-      </div>
+      <Description>
+        <span className="p">{description}</span>
+      </Description>
     </ArticleComponent>
   )
 }

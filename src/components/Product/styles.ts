@@ -7,11 +7,14 @@ export const Item = styled.div`
   justify-content: center;
   align-items: center;
   width: 356px;
-  text-align: center;
-  box-shadow: 0 0 10px 2px ${colors.lightGray};
-  opacity: 1;
   border-radius: 16px;
+  text-align: center;
+  box-shadow: 0px 3px 16px ${colors.lightGray};
+  opacity: 1;
 
+  img {
+    border-radius: 16px;
+  }
   p {
     margin: 24px 32px;
   }
