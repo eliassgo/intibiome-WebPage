@@ -13,20 +13,25 @@ const Header = () => {
   const [isHoveredAbout, setHoveredAbout] = useState<boolean>(false)
   const [isHoveredHealth, setHoveredHealth] = useState<boolean>(false)
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <div>
       <S.Header className="container" id="/">
         <S.Hambuerguer
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={handleMenuClick}
           className={isMenuOpen ? 'is-open' : ''}
         >
           <img src={icMenu} alt="menu icon" />
         </S.Hambuerguer>
         <S.ButtonClose
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={handleMenuClick}
           className={isMenuOpen ? 'is-open' : ''}
         >
-          <XLg size={17} />
+          <XLg size={18} style={{ marginLeft: '6px' }} />
         </S.ButtonClose>
         <div className="logo">
           <a href="/">
@@ -34,14 +39,14 @@ const Header = () => {
           </a>
         </div>
         <div className="search">
-          <a href="#">
+          <a href="">
             {' '}
             <img src={Lupa} alt="search icon" />
           </a>
         </div>
       </S.Header>
       <S.NavBar>
-        <ul className="container">
+        <S.HeaderList className="container">
           <li
             onMouseEnter={() => setHoveredAbout(true)}
             onMouseLeave={() => setHoveredAbout(false)}
@@ -62,50 +67,50 @@ const Header = () => {
             <ChevronDown style={{ marginLeft: '8px' }} size={18} />
           </li>
           <li>contact us</li>
-        </ul>
+        </S.HeaderList>
       </S.NavBar>
       <S.NavBarHover
         onMouseEnter={() => setHoveredAbout(true)}
         onMouseLeave={() => setHoveredAbout(false)}
         className={isHoveredAbout ? 'is-Hovered' : ''}
       >
-        <ul className="container">
+        <S.HoverList className="container">
           <li>
             <a href="">brand philosophy</a>{' '}
           </li>
           <li>
             <a href="">product tecnology</a>{' '}
           </li>
-        </ul>
+        </S.HoverList>
       </S.NavBarHover>
       <S.NavBarHover
         onMouseEnter={() => setHoveredProducts(true)}
         onMouseLeave={() => setHoveredProducts(false)}
         className={isHoveredProducts ? 'is-Hovered' : ''}
       >
-        <ul className="container">
+        <S.HoverList className="container">
           <li>
             {' '}
             <a href="">all products</a>
           </li>
           <li>
             {' '}
-            <a href="">intibiome wellness</a>{' '}
+            <a href="#wellnessPack">intibiome wellness</a>{' '}
           </li>
           <li>
-            <a href="">intibiome active</a>{' '}
+            <a href="#activePack">intibiome active</a>{' '}
           </li>
           <li>
-            <a href="">intibiome agecare</a>{' '}
+            <a href="#agecarePack">intibiome agecare</a>{' '}
           </li>
-        </ul>
+        </S.HoverList>
       </S.NavBarHover>
       <S.NavBarHover
         onMouseEnter={() => setHoveredHealth(true)}
         onMouseLeave={() => setHoveredHealth(false)}
         className={isHoveredHealth ? 'is-Hovered' : ''}
       >
-        <ul className="container">
+        <S.HoverList className="container">
           <li>
             <a href="#article01">article 1</a>{' '}
           </li>
@@ -121,10 +126,10 @@ const Header = () => {
             {' '}
             <a href="">faq </a>{' '}
           </li>
-        </ul>
+        </S.HoverList>
       </S.NavBarHover>
       <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
-        <ul>
+        <S.MobileList>
           <li>
             <a href="">brand philosophy</a>{' '}
           </li>
@@ -160,7 +165,7 @@ const Header = () => {
             {' '}
             <a href="">faq </a>{' '}
           </li>
-        </ul>
+        </S.MobileList>
       </S.NavMobile>
     </div>
   )

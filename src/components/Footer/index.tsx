@@ -20,6 +20,12 @@ const Footer = () => (
         <S.Line />
         <li>
           <S.Link title="Clique aqui para" href="">
+            site map
+          </S.Link>
+        </li>
+        <S.Line />
+        <li>
+          <S.Link title="Clique aqui para" href="">
             privacy policy
           </S.Link>
         </li>
@@ -32,7 +38,7 @@ const Footer = () => (
         <S.Line />
         <li>
           <S.Link title="Clique aqui para" href="">
-            legal police
+            legal notice
           </S.Link>
         </li>
       </S.Links>

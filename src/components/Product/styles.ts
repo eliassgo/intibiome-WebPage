@@ -21,7 +21,10 @@ export const Item = styled.div`
   }
 `
 export const CardTitle = styled.div<
-  Omit<Props, 'image' | 'description' | 'title' | 'imageDescription'>
+  Omit<
+    Props,
+    'image' | 'description' | 'title' | 'imageDescription' | 'idProduct'
+  >
 >`
   padding: 20px 24px;
   background-color: ${(props) =>

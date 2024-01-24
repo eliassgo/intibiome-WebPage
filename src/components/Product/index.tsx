@@ -6,26 +6,26 @@ export type Props = {
   title: string
   imageDescription: string
   descriptionCardColor: string
+  idProduct: string
 }
 const Product = ({
   image,
   description,
   title,
   imageDescription,
-  descriptionCardColor
+  descriptionCardColor,
+  idProduct
 }: Props) => {
   return (
-    <>
-      <Item title={title}>
-        <div>
-          <img src={image} alt={imageDescription} rel="preload" />
-        </div>
-        <p className="p">{description}</p>
-        <CardTitle descriptionCardColor={descriptionCardColor}>
-          <span className="h4">{title}</span>
-        </CardTitle>
-      </Item>
-    </>
+    <Item title={title} id={idProduct}>
+      <div>
+        <img src={image} alt={imageDescription} />
+      </div>
+      <p className="p">{description}</p>
+      <CardTitle descriptionCardColor={descriptionCardColor}>
+        <span className="h4">{title}</span>
+      </CardTitle>
+    </Item>
   )
 }
 

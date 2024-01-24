@@ -28,6 +28,7 @@ export type ProductType = {
   imageDescription: string
   id: number
   cardColor: string
+  idProduct: string
 }
 export type ArticleType = {
   image: string
@@ -44,7 +45,8 @@ const ProducsItems: ProductType[] = [
     description: 'intibiome wellness daily intimate wash',
     title: 'wellness',
     imageDescription: 'intibiome wellness pack',
-    cardColor: 'blue'
+    cardColor: 'blue',
+    idProduct: 'wellnessPack'
   },
   {
     id: 2,
@@ -52,7 +54,8 @@ const ProducsItems: ProductType[] = [
     description: ' intibiome active extra protection intimate wash',
     title: 'active',
     imageDescription: 'intibiome active pack',
-    cardColor: 'green'
+    cardColor: 'green',
+    idProduct: 'activePack'
   },
   {
     id: 3,
@@ -60,7 +63,8 @@ const ProducsItems: ProductType[] = [
     description: 'intibiome agecare dryness relief intimate wash',
     title: 'agecare',
     imageDescription: 'intibiome agecare pack',
-    cardColor: 'red'
+    cardColor: 'red',
+    idProduct: 'agecarePack'
   }
 ]
 const ArticleItems: ArticleType[] = [

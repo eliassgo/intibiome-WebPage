@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   span {
     @media (max-width: ${breakpoints.mobile}) {
-      margin-top: 80px !important;
+      margin-top: 80px;
       font-size: ${fonts.unnamedFontSize31};
       line-height: ${fonts.unnamedLineSpacing40};
       letter-spacing: ${fonts.unnamedCharacterSpacing062};
@@ -62,7 +62,6 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   margin-top: 85px;
-  margin-bottom: 120px;
 
   @media (max-width: 760px) {
     width: 90%;

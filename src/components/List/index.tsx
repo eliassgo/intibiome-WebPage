@@ -20,6 +20,7 @@ const List = ({ title, items, listType, article }: Props) => {
             items.map((item) => (
               <li key={item.id}>
                 <Product
+                  idProduct={item.idProduct}
                   image={item.image}
                   description={item.description}
                   title={item.title}

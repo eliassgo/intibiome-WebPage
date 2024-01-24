@@ -116,7 +116,5 @@ color: ${colors.brandGray};
   max-width: 1134px;
   width: 100%;
   margin: 0 auto;
-
-
 }
 `

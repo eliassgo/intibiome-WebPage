@@ -8,14 +8,9 @@ export type Props = {
 
 const Banner = ({ image, imageDescription, mobileBanner }: Props) => {
   return (
-    <div id="home">
-      <Image
-        rel="preload"
-        src={image}
-        alt={imageDescription}
-        mobileBanner={mobileBanner}
-      />
-    </div>
+    <>
+      <Image src={image} alt={imageDescription} mobileBanner={mobileBanner} />
+    </>
   )
 }
 export default Banner

@@ -3,9 +3,8 @@ import { colors, fonts } from '../../styles'
 
 export const Container = styled.footer`
   padding-top: 56px;
-  margin-top: 120px;
   background-color: ${colors.blue};
-
+  padding-bottom: 64px;
   @media (max-width: 760px) {
     margin-top: 80px;
   }
@@ -24,9 +23,6 @@ export const Links = styled.ul`
     letter-spacing: ${fonts.unnamedCharacterSpacing04};
     opacity: 1;
     text-align: center;
-
-    @media (max-width: 760px) {
-    }
   }
 
   @media (max-width: 760px) {
@@ -44,9 +40,6 @@ export const FooterSection = styled.div`
     display: flex;
     justify-content: space-between;
 
-    li {
-      padding-bottom: 108px;
-    }
     @media (max-width: 760px) {
       display: flex;
       flex-direction: column-reverse;
