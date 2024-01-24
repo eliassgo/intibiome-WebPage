@@ -83,6 +83,10 @@ export const Header = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   @media (max-width: 760px) {
@@ -115,14 +119,14 @@ export const NavBar = styled.nav`
     cursor: pointer;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
 `
 export const Hambuerguer = styled.div`
   display: none;
 
-  @media (max-width: 760px) {
+  @media (max-width: ${breakpoints.mobile}) {
     display: flex;
   }
 
@@ -134,7 +138,7 @@ export const Hambuerguer = styled.div`
 export const ButtonClose = styled.div`
   display: none;
 
-  @media (max-width: 760px) {
+  @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
   &.is-open {

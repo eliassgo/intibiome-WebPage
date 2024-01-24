@@ -1,4 +1,3 @@
-import React from 'react'
 import { ArticleComponent, Description } from './styles'
 
 export type Props = {

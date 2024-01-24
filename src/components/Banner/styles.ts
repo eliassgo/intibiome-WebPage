@@ -5,7 +5,7 @@ import { Props } from '.'
 export const Image = styled.img<Omit<Props, 'imageDescription' | 'image'>>`
   width: 100%;
 
-  @media (max-width: 760px) {
+  @media (max-width: ${breakpoints.mobile}) {
     ${(props) =>
       props.mobileBanner ? `content: url(${props.mobileBanner});` : ''}
   }

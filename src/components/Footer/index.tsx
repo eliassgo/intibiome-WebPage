@@ -1,6 +1,6 @@
 import * as S from './styles'
-import InstagraIcon from '../../assets/images/Layer-2.svg'
-import uLabsIcon from '../../assets/images/u-labs-icon.png'
+import InstagraIcon from '../../assets/icons/Layer-2.svg'
+import uLabsIcon from '../../assets/icons/u-labs-icon.png'
 
 const Footer = () => (
   <S.Container>

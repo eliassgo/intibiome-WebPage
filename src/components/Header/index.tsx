@@ -1,10 +1,8 @@
 import { useState } from 'react'
 
-import { Link } from 'react-router-dom'
-
 import Logo from '../../assets/images/Module1-Header-970x60025.jpg'
-import Lupa from '../../assets/images/ic.search.svg'
-import icMenu from '../../assets/images/ic.menu.svg'
+import Lupa from '../../assets/icons/ic.search.svg'
+import icMenu from '../../assets/icons/ic.menu.svg'
 
 import { ChevronDown, XLg } from 'react-bootstrap-icons'
 
@@ -17,7 +15,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <div>
-      <S.Header className="container">
+      <S.Header className="container" id="/">
         <S.Hambuerguer
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={isMenuOpen ? 'is-open' : ''}
@@ -31,10 +29,9 @@ const Header = () => {
           <XLg size={17} />
         </S.ButtonClose>
         <div className="logo">
-          <Link to="/">
-            {' '}
+          <a href="/">
             <img src={Logo} alt="intibiome web logo" />
-          </Link>
+          </a>
         </div>
         <div className="search">
           <a href="#">

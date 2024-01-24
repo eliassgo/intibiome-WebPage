@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Props } from '.'
-import { breakpoints, colors, fonts } from '../../styles'
+import { breakpoints, fonts } from '../../styles'
 
 export const CardComponent = styled.div<Props>`
   display: flex;

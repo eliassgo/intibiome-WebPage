@@ -1,4 +1,4 @@
-import * as S from './styles'
+import { Image } from './styles'
 
 export type Props = {
   image: string
@@ -8,14 +8,14 @@ export type Props = {
 
 const Banner = ({ image, imageDescription, mobileBanner }: Props) => {
   return (
-    <>
-      <S.Image
+    <div id="home">
+      <Image
         rel="preload"
         src={image}
         alt={imageDescription}
         mobileBanner={mobileBanner}
       />
-    </>
+    </div>
   )
 }
 export default Banner

@@ -1,4 +1,3 @@
-import React from 'react'
 import { CardComponent } from './styles'
 
 export type Props = {
