@@ -1,11 +1,23 @@
 import { styled } from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors, fonts } from '../../styles'
 
 export const Container = styled.div`
   text-align: center;
+  margin-top: 120px !important;
+  margin-bottom: 120px !important;
 
-  h2 {
-    margin-top: 120px;
+  span {
+    @media (max-width: ${breakpoints.mobile}) {
+      margin-top: 80px !important;
+      font-size: ${fonts.unnamedFontSize31};
+      line-height: ${fonts.unnamedLineSpacing40};
+      letter-spacing: ${fonts.unnamedCharacterSpacing062};
+    }
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: 80px !important;
+    margin-bottom: 64px !important;
   }
 `
 export const ListComponent = styled.ul`
@@ -13,7 +25,30 @@ export const ListComponent = styled.ul`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 33px;
   margin-top: 80px;
-  margin-bottom: 120px;
+
+  li {
+    height: 100%;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0;
+
+    li {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
 `
 
 export const Button = styled.button`
@@ -21,8 +56,17 @@ export const Button = styled.button`
   color: ${colors.white} !important;
   text-align: center;
   text-transform: lowercase;
-  padding: 32px 178px;
+  width: 392px;
+  padding: 20px 0;
   border-radius: 16px;
   border: none;
   cursor: pointer;
+  margin-top: 85px;
+  margin-bottom: 120px;
+
+  @media (max-width: 760px) {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
 `

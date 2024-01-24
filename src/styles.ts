@@ -7,7 +7,7 @@ export const colors = {
   darkGray: '#7B7070',
   green: '#309D5F',
   lightGray: '#00000014',
-  red: '##EE6381',
+  red: '#EE6381',
   color549bd1: '#549BD1',
   brandGray: '#9d8d8d'
 }
@@ -38,8 +38,8 @@ export const fonts = {
 }
 
 export const breakpoints = {
-  desktop: '1024px',
-  tablet: '768px'
+  tablet: '1024px',
+  mobile: '760px'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -52,8 +52,6 @@ export const GlobalCss = createGlobalStyle`
 }
 
 body{
-
-
 
 /* Character Styles */
 
@@ -119,8 +117,6 @@ color: ${colors.brandGray};
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: ${breakpoints.desktop}){
-    max-width: 80%;
-  }
+
 }
 `

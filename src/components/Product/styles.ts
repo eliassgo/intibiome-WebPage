@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
+import { Props } from '.'
 
 export const Item = styled.div`
   display: flex;
@@ -19,9 +20,16 @@ export const Item = styled.div`
     margin: 24px 32px;
   }
 `
-export const CardTitle = styled.div`
+export const CardTitle = styled.div<
+  Omit<Props, 'image' | 'description' | 'title' | 'imageDescription'>
+>`
   padding: 20px 24px;
-  background-color: ${colors.blue};
+  background-color: ${(props) =>
+    props.descriptionCardColor === 'blue'
+      ? colors.blue
+      : props.descriptionCardColor === 'red'
+      ? colors.red
+      : colors.green};
   color: ${colors.white};
   width: 100%;
   border-radius: 0px 0px 16px 16px;

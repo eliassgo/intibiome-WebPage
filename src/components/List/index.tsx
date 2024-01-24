@@ -14,7 +14,7 @@ const List = ({ title, items, listType, article }: Props) => {
   if (listType === 'product') {
     return (
       <Container className="container">
-        <h2 className="h2">{title}</h2>
+        <span className="h2">{title}</span>
         <ListComponent>
           {items &&
             items.map((item) => (
@@ -24,6 +24,7 @@ const List = ({ title, items, listType, article }: Props) => {
                   description={item.description}
                   title={item.title}
                   imageDescription={item.imageDescription}
+                  descriptionCardColor={item.cardColor}
                 />
               </li>
             ))}
@@ -40,9 +41,11 @@ const List = ({ title, items, listType, article }: Props) => {
           article.map((a) => (
             <li key={a.id}>
               <Article
+                id={a.id}
                 image={a.image}
                 description={a.description}
                 imageDescription={a.imageDescription}
+                link={a.link}
               />
             </li>
           ))}

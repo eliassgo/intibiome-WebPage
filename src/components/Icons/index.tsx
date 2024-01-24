@@ -1,15 +1,17 @@
 import React from 'react'
 import IconsImage from '../../assets/images/icons.jpg'
+import { IconsComponent } from './styles'
 
 const Icons = () => {
   return (
-    <div className="container">
+    <IconsComponent className="container">
       <img
         src={IconsImage}
         alt="intibione's benefits icons"
-        style={{ margin: '28px 0' }}
+        style={{ margin: '40px 0' }}
+        rel="preload"
       />
-    </div>
+    </IconsComponent>
   )
 }
 

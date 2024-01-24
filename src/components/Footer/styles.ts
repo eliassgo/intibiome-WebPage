@@ -2,9 +2,13 @@ import styled from 'styled-components'
 import { colors, fonts } from '../../styles'
 
 export const Container = styled.footer`
-  padding: 56px 0;
+  padding-top: 56px;
   margin-top: 120px;
   background-color: ${colors.blue};
+
+  @media (max-width: 760px) {
+    margin-top: 80px;
+  }
 `
 export const Links = styled.ul`
   display: flex;
@@ -19,24 +23,48 @@ export const Links = styled.ul`
     line-height: ${fonts.unnamedLineSpacing28};
     letter-spacing: ${fonts.unnamedCharacterSpacing04};
     opacity: 1;
-    border-right: 2px solid #fff;
     text-align: center;
-    padding: 0px 24px;
+
+    @media (max-width: 760px) {
+    }
   }
 
-  .noneBorder {
-    border: none !important;
+  @media (max-width: 760px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 export const Link = styled.a`
   color: ${colors.white};
   text-decoration: none;
-  padding: 15px 24px;
 `
 export const FooterSection = styled.div`
   margin-top: 60px;
   ul {
     display: flex;
     justify-content: space-between;
+
+    li {
+      padding-bottom: 108px;
+    }
+    @media (max-width: 760px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+`
+
+export const Line = styled.span`
+  width: 2px;
+  height: 24px;
+  display: block;
+  background-color: ${colors.white};
+  margin: 0 34px;
+
+  @media (max-width: 760px) {
+    width: 24px;
+    height: 2px;
+    margin: 34px 0px;
   }
 `

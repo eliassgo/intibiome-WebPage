@@ -12,12 +12,14 @@ import List from '../../components/List'
 
 import bannerImage from '../../assets/images/banner-hero.jpg'
 import banner02 from '../../assets/images/Asset-22.jpg'
-import imageMask01 from '../../assets/images/image-mask.jpg'
-import imageMask03 from '../../assets/images/image-mask-2.jpg'
-import imageMask02 from '../../assets/images/imagemask-1.jpg'
+import bluePack from '../../assets/images/Blue-Pack.jpg'
+import greenPack from '../../assets/images/Green-Pack.jpg'
+import pinkPack from '../../assets/images/Pink-Pack.jpg'
 import imageMaskArticle01 from '../../assets/images/image-mask-03.jpg'
 import imageMaskArticle02 from '../../assets/images/image-mask-01.jpg'
 import imageMaskArticle03 from '../../assets/images/image-mask-02.jpg'
+import mobileBanner01 from '../../assets/images/banner-intibiome-02.jpg'
+import mobileBanner02 from '../../assets/images/banner-intibiome-05.jpg'
 
 export type ProductType = {
   image: string
@@ -25,55 +27,63 @@ export type ProductType = {
   title: string
   imageDescription: string
   id: number
+  cardColor: string
 }
 export type ArticleType = {
   image: string
   description: string
   imageDescription: string
-  id: number
+  id: string
+  link: string
 }
 
 const ProducsItems: ProductType[] = [
   {
     id: 1,
-    image: imageMask01,
+    image: bluePack,
     description: 'intibiome wellness daily intimate wash',
     title: 'wellness',
-    imageDescription: 'intibiome active extra protection intimate wash'
+    imageDescription: 'intibiome wellness pack',
+    cardColor: 'blue'
   },
   {
     id: 2,
-    image: imageMask03,
-    description: 'intibiome active extra protection intimate wash',
+    image: greenPack,
+    description: ' intibiome active extra protection intimate wash',
     title: 'active',
-    imageDescription: 'intibiome agecare dryness relief intimate wash'
+    imageDescription: 'intibiome active pack',
+    cardColor: 'green'
   },
   {
     id: 3,
-    image: imageMask02,
+    image: pinkPack,
     description: 'intibiome agecare dryness relief intimate wash',
     title: 'agecare',
-    imageDescription: 'intibiome agecare dryness relief intimate wash'
+    imageDescription: 'intibiome agecare pack',
+    cardColor: 'red'
   }
 ]
 const ArticleItems: ArticleType[] = [
   {
-    id: 1,
+    id: 'article01',
     image: imageMaskArticle01,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'woman stretching'
+    imageDescription: 'woman stretching',
+    link: ''
   },
   {
-    id: 2,
+    id: 'article02',
     image: imageMaskArticle02,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'woman"s face'
+    imageDescription: 'woman"s face',
+    link: ''
   },
   {
-    id: 3,
+    id: 'article03',
     image: imageMaskArticle03,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'water drops'
+    imageDescription: 'water drops',
+    link: ''
   }
 ]
 
@@ -81,26 +91,30 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Banner image={bannerImage} imageDescription="Intibiome Web Banner" />
-      <Card title="we’re here to help" margin="28" width="400">
+      <Banner
+        image={bannerImage}
+        imageDescription="Intibiome Web Banner"
+        mobileBanner={mobileBanner01}
+      />
+      <Card title="we’re here to help" width="400">
         <>
           <Paragraph width="400">
             <>
               When it comes to caring for our most intimate areas, we’ve lost
-              our connection
+              our connection.
             </>
           </Paragraph>
           <Paragraph width="400">
             <>
               Embarrassed, unwilling, or unable to communicate with others,
               we’re needlessly neglecting the parts of our bodies that need it
-              most
+              most.
             </>
           </Paragraph>
           <Paragraph width="400">
             <>
               We’re here to help. Providing you with the expertise, knowledge
-              and products you need to feel confident in your
+              and products you need to feel confident in your.
             </>
           </Paragraph>
         </>
@@ -108,7 +122,6 @@ const Home = () => {
       <Icons />
       <Card
         title="whatever your age. whatever your lifestyle. whatever your interests."
-        margin="28"
         width="800"
       >
         <>
@@ -129,7 +142,11 @@ const Home = () => {
         </>
       </Card>
       <List title="our products" items={ProducsItems} listType="product" />
-      <Banner image={banner02} imageDescription="Intibiome Products Banner" />
+      <Banner
+        image={banner02}
+        imageDescription="Intibiome Products Banner"
+        mobileBanner={mobileBanner02}
+      />
       <List
         title="keep up to date with our discoveries"
         article={ArticleItems}

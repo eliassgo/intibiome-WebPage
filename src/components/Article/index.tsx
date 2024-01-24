@@ -5,14 +5,16 @@ export type Props = {
   image: string
   imageDescription: string
   description: string
+  link: string
+  id: string
 }
-const Article = ({ image, imageDescription, description }: Props) => {
+const Article = ({ image, imageDescription, description, link, id }: Props) => {
   return (
-    <ArticleComponent>
+    <ArticleComponent id={id}>
       <div>
-        <img src={image} alt={imageDescription} />
+        <img src={image} alt={imageDescription} rel="preload" />
       </div>
-      <Description>
+      <Description href={link}>
         <span className="p">{description}</span>
       </Description>
     </ArticleComponent>
