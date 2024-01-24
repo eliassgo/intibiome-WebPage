@@ -1,5 +1,7 @@
 import * as S from './styles'
 import InstagraIcon from '../../assets/images/Layer-2.svg'
+import uLabsIcon from '../../assets/images/u-labs-icon.png'
+
 const Footer = () => (
   <S.Container>
     <div className="container">
@@ -27,12 +29,12 @@ const Footer = () => (
         <ul>
           <li>
             <S.Link>
-              <img src={InstagraIcon} alt="" />
+              <img src={uLabsIcon} alt=" U-Labs Web Icons" />
             </S.Link>
           </li>
           <li>
             <S.Link>
-              <img src={InstagraIcon} alt="" />
+              <img src={InstagraIcon} alt="Instagram Web Icon" />
             </S.Link>
           </li>
         </ul>

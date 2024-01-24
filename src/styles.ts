@@ -9,7 +9,7 @@ export const colors = {
   lightGray: '#00000014',
   red: '##EE6381',
   color549bd1: '#549BD1',
-  color9d8d8d: '#9d8d8d'
+  brandGray: '#9d8d8d'
 }
 
 /* Font/text values */
@@ -109,7 +109,7 @@ font-weight: ${fonts.unnamedFontWeightNormal};
 font-size: ${fonts.unnamedFontSize16};
 line-height:  ${fonts.unnamedLineSpacing22};
 letter-spacing:  ${fonts.unnamedCharacterSpacing032};
-color: ${colors.color9d8d8d};
+color: ${colors.brandGray};
 }
 
 }

@@ -1,5 +1,38 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { breakpoints, colors, fonts } from '../../styles'
+
+export const NavBarHover = styled.nav`
+  position: absolute;
+  background-color: ${colors.brandGray};
+  height: 49px;
+  display: none;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: ${fonts.unnamedFontStyleNormal};
+    font-weight: ${fonts.unnamedFontWeightNormal};
+    font-size: ${fonts.unnamedFontSize16};
+    line-height: ${fonts.unnamedLineSpacing22};
+    letter-spacing: ${fonts.unnamedCharacterSpacing032};
+    color: ${colors.white};
+  }
+
+  li {
+    margin: 0 20px 0 20px;
+
+    a {
+      text-decoration: none;
+      color: ${colors.white};
+    }
+  }
+
+  &.is-Hovered {
+    display: flex;
+  }
+`
 
 export const Header = styled.div`
   display: flex;
@@ -26,9 +59,19 @@ export const NavBar = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-style: ${fonts.unnamedFontStyleNormal};
+    font-weight: ${fonts.unnamedFontWeightNormal};
+    font-size: ${fonts.unnamedFontSize16};
+    line-height: ${fonts.unnamedLineSpacing22};
+    letter-spacing: ${fonts.unnamedCharacterSpacing032};
+    color: ${colors.white};
   }
 
   li {
-    margin: 0 20px 0 20px;
+    padding: 15px 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 `

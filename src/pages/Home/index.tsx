@@ -39,21 +39,21 @@ const ProducsItems: ProductType[] = [
     image: imageMask01,
     description: 'intibiome wellness daily intimate wash',
     title: 'wellness',
-    imageDescription: 'oooooooo'
+    imageDescription: 'intibiome active extra protection intimate wash'
   },
   {
     id: 2,
     image: imageMask03,
     description: 'intibiome active extra protection intimate wash',
     title: 'active',
-    imageDescription: 'oooooooo'
+    imageDescription: 'intibiome agecare dryness relief intimate wash'
   },
   {
     id: 3,
     image: imageMask02,
     description: 'intibiome agecare dryness relief intimate wash',
     title: 'agecare',
-    imageDescription: 'oooooooo'
+    imageDescription: 'intibiome agecare dryness relief intimate wash'
   }
 ]
 const ArticleItems: ArticleType[] = [
@@ -61,19 +61,19 @@ const ArticleItems: ArticleType[] = [
     id: 1,
     image: imageMaskArticle01,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'oooooooo'
+    imageDescription: 'woman stretching'
   },
   {
     id: 2,
     image: imageMaskArticle02,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'oooooooo'
+    imageDescription: 'woman"s face'
   },
   {
     id: 3,
     image: imageMaskArticle03,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    imageDescription: 'oooooooo'
+    imageDescription: 'water drops'
   }
 ]
 
@@ -81,7 +81,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Banner image={bannerImage} imageDescription="banner" />
+      <Banner image={bannerImage} imageDescription="Intibiome Web Banner" />
       <Card title="we’re here to help" margin="28" width="400">
         <>
           <Paragraph width="400">
@@ -129,7 +129,7 @@ const Home = () => {
         </>
       </Card>
       <List title="our products" items={ProducsItems} listType="product" />
-      <Banner image={banner02} imageDescription="banner" />
+      <Banner image={banner02} imageDescription="Intibiome Products Banner" />
       <List
         title="keep up to date with our discoveries"
         article={ArticleItems}
