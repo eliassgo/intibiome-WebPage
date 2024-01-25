@@ -29,7 +29,7 @@ npm start # Reinicie a aplicação
 
 ## Sobre o projeto
 
-Esta é uma página web da marca de cosméticos intibiome, a aplicação consiste em uma página web com informações sobre a marca e descrições sobre seus produtos. A página segue os padrões de responsividade e acessibildade.
+Esta é uma página web da marca de cosméticos intibiome, a aplicação consiste em uma página web com informações sobre a marca e descrições sobre seus produtos. A página segue os padrões de responsividade e acessibilidade.
 
 O código foi desenvolvido em React com TypeScript e estilizada com CSS em arquivos do tipo styles.ts.
 
