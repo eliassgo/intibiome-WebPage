@@ -50,7 +50,7 @@ const Footer = () => (
               <img src={uLabsIcon} alt=" U-Labs Web Icons" />
             </S.Link>
           </li>
-          <li>
+          <li className="paddingBottom">
             <S.Link href="">
               <img src={InstagraIcon} alt="Instagram Web Icon" />
             </S.Link>

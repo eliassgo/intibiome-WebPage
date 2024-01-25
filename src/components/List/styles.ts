@@ -3,8 +3,8 @@ import { breakpoints, colors, fonts } from '../../styles'
 
 export const Container = styled.div`
   text-align: center;
-  margin-top: 120px !important;
-  margin-bottom: 120px !important;
+  margin-top: 120px;
+  margin-bottom: 120px;
 
   span {
     @media (max-width: ${breakpoints.mobile}) {
@@ -16,8 +16,8 @@ export const Container = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    margin-top: 80px !important;
-    margin-bottom: 64px !important;
+    margin-top: 80px;
+    margin-bottom: 64px;
   }
 `
 export const ListComponent = styled.ul`

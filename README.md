@@ -35,5 +35,4 @@ O código foi desenvolvido em React com TypeScript e estilizada com CSS em arqui
 
 ## Learn More
 
-
 To learn React, check out the [React documentation](https://reactjs.org/).

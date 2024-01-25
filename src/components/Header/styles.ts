@@ -16,7 +16,7 @@ export const MobileList = styled(ListUl)`
   background-color: ${colors.blue};
 
   li {
-    padding: 15px 47px;
+    padding: 15px 48px;
     display: flex;
 
     cursor: pointer;
@@ -70,7 +70,7 @@ export const NavMobile = styled.div`
 export const NavBarHover = styled.nav`
   position: absolute;
   background-color: ${colors.brandGray};
-  height: 49px;
+  height: 100%;
   display: flex;
   width: 100%;
   opacity: 0;

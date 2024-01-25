@@ -44,6 +44,9 @@ export const FooterSection = styled.div`
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      .paddingBottom {
+        padding-bottom: 108px;
+      }
     }
   }
 `

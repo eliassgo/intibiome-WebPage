@@ -12,7 +12,7 @@ export const Item = styled.div`
   text-align: center;
   box-shadow: 0px 3px 16px ${colors.lightGray};
   opacity: 1;
-
+  background: #ffffff 0% 0% no-repeat padding-box;
   img {
     border-radius: 16px;
   }
