@@ -38,12 +38,11 @@ const Header = () => {
             <img src={Logo} alt="intibiome web logo" />
           </a>
         </div>
-        <div className="search">
-          <a href="">
-            {' '}
-            <img src={Lupa} alt="search icon" />
-          </a>
-        </div>
+
+        <a href="">
+          {' '}
+          <img src={Lupa} alt="search icon" />
+        </a>
       </S.Header>
       <S.NavBar>
         <S.HeaderList className="container">

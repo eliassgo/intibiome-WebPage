@@ -70,7 +70,7 @@ export const NavMobile = styled.div`
 export const NavBarHover = styled.nav`
   position: absolute;
   background-color: ${colors.brandGray};
-  height: 100%;
+  height: 49px;
   display: flex;
   width: 100%;
   opacity: 0;

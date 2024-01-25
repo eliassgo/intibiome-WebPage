@@ -10,7 +10,7 @@ export const CardComponent = styled.div<Props>`
 
   .title {
     width: ${(props) => props.width + 'px'};
-    margin: 40px 0 40px 0;
+    margin-bottom: 32px;
 
     @media (max-width: ${breakpoints.mobile}) {
       width: 80%;
@@ -18,5 +18,8 @@ export const CardComponent = styled.div<Props>`
       line-height: ${fonts.unnamedLineSpacing40};
       letter-spacing: ${fonts.unnamedCharacterSpacing062};
     }
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
   }
 `

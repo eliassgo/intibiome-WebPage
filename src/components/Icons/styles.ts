@@ -3,8 +3,8 @@ import { breakpoints } from '../../styles'
 
 export const IconsComponent = styled.div`
   img {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
@@ -13,13 +13,6 @@ export const IconsComponent = styled.div`
     img {
       width: 90%;
       margin: 0;
-    }
-  }
-
-  @media (max-width: ${breakpoints.mobile}) {
-    img {
-      margin-top: 40px;
-      margin-bottom: 0;
     }
   }
 `

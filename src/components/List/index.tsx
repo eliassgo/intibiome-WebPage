@@ -11,9 +11,17 @@ export type Props = {
 }
 
 const List = ({ title, items, listType, article }: Props) => {
+  const marginTop = {
+    marginTop: '120px'
+  }
+
+  const marginTopArticle = {
+    marginTop: '80px'
+  }
+
   if (listType === 'product') {
     return (
-      <Container className="container">
+      <Container className="container" style={marginTop}>
         <span className="h2">{title}</span>
         <ListComponent>
           {items &&
@@ -35,7 +43,7 @@ const List = ({ title, items, listType, article }: Props) => {
   }
 
   return (
-    <Container className="container">
+    <Container className="container" style={marginTopArticle}>
       <h2 className="h2">{title}</h2>
       <ListComponent>
         {article &&
