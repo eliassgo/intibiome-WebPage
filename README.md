@@ -27,6 +27,14 @@ npx eslint --fix .
 npm start # Reinicie a aplicação
  ```
 
+### Nota: Se você estiver trabalhando no projeto usando o software VSCode, é recomendável que você tenha as seguintes extensões para uma melhor experiência de desenvolvimento:
+
+- **EditorConfig for VS Code**
+- **ESLint**
+- **Prettier - Code formatter**
+
+
+
 ## Sobre o projeto
 
 Esta é uma página web da marca de cosméticos intibiome, a aplicação consiste em uma página web com informações sobre a marca e descrições sobre seus produtos. A página segue os padrões de responsividade e acessibilidade.
